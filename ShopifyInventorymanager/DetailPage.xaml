@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="ShopifyInventorymanager.DetailPage"
+             Title="Details">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label
+                Text="Omschrijving:"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                HorizontalOptions="Start" />
+            <Label
+                Text="{Binding Path=ThisProductVariant.displayName}"/>
+            <Label
+                Text="Voorraadlocatie:"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                HorizontalOptions="Start" />
+            <Label
+                Text="{Binding Path=ThisProductVariant.inventoryLocationName}"/>
+            <Label
+                Text="Voorraad:"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                HorizontalOptions="Start" />
+            <Entry
+                x:Name="InventoryEntry"
+                Text="{Binding Path=ThisProductVariant.inventoryAvailable}"
+                Keyboard="Numeric"
+                TextChanged="InventoryEntry_TextChanged"/>
+            <Label
+                Text="Prijs:"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                HorizontalOptions="Start" />
+            <Entry
+                x:Name="PriceEntry"
+                Text="{Binding Path=ThisProductVariant.price}"
+                TextChanged="PriceEntry_TextChanged"
+                Keyboard="Numeric">
+            </Entry>
+            <Button x:Name="UpdateBtn" Text="Bijwerken" Clicked="UpdateBtn_Clicked" Margin="0,0,0,20"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

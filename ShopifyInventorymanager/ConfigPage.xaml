@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShopifyInventorymanager.ConfigPage"
+             Title="Configuratiepagina">
+    <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+        <Label 
+            Text="Geef hier de gegevens van de Shopify API in:"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontAttributes="Bold"
+            TextColor="DarkBlue"
+            FontSize="Title"/>
+        <Label Text="Shopify pagina (baseurl):"/>
+        <Entry x:Name="BaseurlEntry"
+               Placeholder="https://12x345.myshopify.com"
+               TextChanged="Entry_TextChanged"/>
+        <Label Text="Api Key:"/>
+        <Entry x:Name="ApikeyEntry"
+               Placeholder="shpat_1234567890abc12345678901234567ab"
+               TextChanged="Entry_TextChanged"/>
+        <Button x:Name="OkBtn"
+                Text="OK"
+                IsEnabled="False"
+                Clicked="OkBtn_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>

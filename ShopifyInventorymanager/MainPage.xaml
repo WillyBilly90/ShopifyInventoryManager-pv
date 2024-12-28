@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
+             x:Class="ShopifyInventorymanager.MainPage"
+             Title="Shopify Voorraadbeheer">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <zxing:CameraBarcodeReaderView x:Name="cameraBarcodeReaderView" BarcodesDetected="BarcodesDetected" />
+            <Entry x:Name="SearchEntry" Placeholder="zoekterm" Margin="0,20,0,0" Completed="SearchEntry_Completed" />
+            <Button x:Name="SearchBarcodeBtn" Text="Zoek op barcode" Clicked="SearchBarcodeBtn_Clicked"/>
+            <Button x:Name="SearchTermBtn" Text="Zoek op omschrijving" Clicked="SearchTermBtn_Clicked" Margin="0,0,0,20"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
