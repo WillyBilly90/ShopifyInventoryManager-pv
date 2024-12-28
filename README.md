@@ -1,0 +1,1 @@
+This repository contains code to view and modify the inventory of a Shopify store using MAUI, C#, and the GraphQL API. Feel free to modify the code as needed. It works on Windows, Android, and iPhone/iPad.
